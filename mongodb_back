@@ -1,0 +1,31 @@
+1 登录docker
+
+2 docker exec -it mongodb bash
+  ssh root@123.56.198.75
+
+3 Microduino2016
+  DNA
+
+4 mongodump -d DNA -o DNA
+  mongorestore -d DNA -- drop DNA
+
+5 来自cnblogs
+
+  mongoDB数据库备份
+
+    mongodump -h dbhost -d dbname -o dbdirectory 备份mongoDB数据库
+    重新打开 dos命令框
+    mongodump -h 127.0.0.1:27017 -d test -o c:/test 备份数据库 test到 c:/test 备份的是bson格式，二进制json
+    use test ; 进入数据库test
+    db.dropDatabase(); 删除数据库
+  恢复数据库文件
+    mongorestore -h dbhost -d dbname -directoryperdb dbdirectory
+    mongorestore -h 127.0.0.1:27017 -d test -directoryperdb c:/test
+  导出 导入 是纯文本文件
+   导出
+     mongoexport -h dbhost -d dbname -c collectionName -o output
+     mongoexport -h localhost:27017 -d test -c person -o e:\test\bak
+   把文件数据导入数据库中的集合
+     mongoimport -h localhost:27017 -d test -c person -o e:\test\bak
+
+6 本地的/var/lib/mongodb和docker 里的/data/db是一个目录，你在docker里备份好，打个包，放到/data/db里，出来到/var/lib/mongodb里拷走
