@@ -12,7 +12,7 @@
 5 来自cnblogs
 
   mongoDB数据库备份
-
+ 
     mongodump -h dbhost -d dbname -o dbdirectory 备份mongoDB数据库
     重新打开 dos命令框
     mongodump -h 127.0.0.1:27017 -d test -o c:/test 备份数据库 test到 c:/test 备份的是bson格式，二进制json
