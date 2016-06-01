@@ -1,13 +1,4 @@
-1 登录docker
 
-2 docker exec -it mongodb bash
-  ssh root@123.56.198.75
-
-3 Microduino2016
-  DNA
-
-4 mongodump -d DNA -o DNA
-  mongorestore -d DNA -- drop DNA
 
 5 来自cnblogs
 
